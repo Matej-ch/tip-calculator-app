@@ -1,11 +1,19 @@
-function TipSelector({options}: { options: number[] }) {
-    return (<div>
-        <label htmlFor="">Select tip %</label>
-        {options.map(tip => {
-            return <button className={'tip-box'}>{tip}%</button>
-        })}
+import './TipSelector.scss'
 
-        <button className={'tip-box'}>Custom</button>
+function TipSelector({options}: { options: number[] }) {
+
+
+
+    return (<div className={'tip-selector'}>
+        <label htmlFor="">Select tip %</label>
+        <div className={'options'}>
+            {options.map((tip, index) => {
+                return <button className={'tip-box'} key={index}>{tip}%</button>
+            })}
+
+            <button className={'tip-box'}>Custom</button>
+        </div>
+
     </div>);
 }
 

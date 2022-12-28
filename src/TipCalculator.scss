@@ -5,4 +5,70 @@
   padding: 1.5rem;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
+  margin: 0 auto;
+
+  label {
+    display: block;
+  }
+
+  label + .input-wrapper {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  label + .input-wrapper img {
+    position: absolute;
+    top: 35%;
+    left: 10px;
+  }
+
+  label + .input-wrapper input {
+    border: none;
+    background-color: var(--cc-very-light-gray-cyan);
+    text-align: right;
+    border-radius: 8px;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    color: var(--cc-dark-cyan);
+    width: 100%;
+
+    &:focus {
+      outline: solid var(--cc-strong-cyan);
+    }
+  }
+}
+
+.final-tip-wrapper {
+  background-color: var(--cc-dark-cyan);
+  border-radius: 16px;
+  padding: 1.25rem;
+
+  .price {
+    color: var(--cc-strong-cyan);
+    font-size: 2rem;
+  }
+
+  h4 {
+    color: var(--cc-white);
+
+    span {
+      color: var(--cc-gray-cyan);
+      font-size: 0.85rem;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    background-color: var(--cc-strong-cyan);
+    border: none;
+    color: var(--cc-dark-cyan);
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+    margin-top: 2rem;
+
+    &:hover {
+      background-color: var(--cc-hover);
+    }
+  }
 }

@@ -1,0 +1,26 @@
+.tip-selector {
+  padding-bottom: 2rem;
+
+  label {
+    margin-bottom: 1rem;
+  }
+
+  .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  button {
+    border: none;
+    color: var(--cc-white);
+    background-color: var(--cc-dark-cyan);
+    border-radius: 8px;
+    padding: 0.75rem;
+    cursor: pointer;
+
+    &.selected {
+      background-color: var(--cc-strong-cyan);
+    }
+  }
+}
