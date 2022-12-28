@@ -19,8 +19,33 @@
     padding: 0.75rem;
     cursor: pointer;
 
+    &:hover {
+      background-color: var(--cc-hover);
+      color: var(--cc-dark-cyan);
+    }
+
     &.selected {
+      color: var(--cc-dark-cyan);
       background-color: var(--cc-strong-cyan);
+    }
+  }
+
+  button.custom-tip {
+    color: var(--cc-dark-cyan);
+    background-color: var(--cc-light-gray-cyan);
+  }
+
+  input.custom-tip {
+    border: none;
+    background-color: var(--cc-very-light-gray-cyan);
+    text-align: right;
+    border-radius: 8px;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    color: var(--cc-dark-cyan);
+    width: 100%;
+
+    &:focus {
+      outline: solid var(--cc-strong-cyan);
     }
   }
 }
