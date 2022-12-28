@@ -1,3 +1,12 @@
+.app-name {
+ text-transform: uppercase;
+  color: var(--cc-dark-cyan);
+  letter-spacing: 10px;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
 @media screen and (min-width: 600px) {
   
 }

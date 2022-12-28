@@ -13,7 +13,7 @@
   --fw-regular: 400;
   --fw-bold: 700;
 
-  --cc-background: hsl(172, 67%, 45%);
+  --cc-strong-cyan: hsl(172, 67%, 45%);
 
   --cc-dark-cyan: hsl(183, 100%, 15%);
   --cc-dark-gray-cyan: hsl(186, 14%, 43%);
@@ -42,12 +42,12 @@ body {
   font-size: var(--fs-base);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--cc-background);
+  background-color: var(--cc-light-gray-cyan);
   overflow: hidden;
-
+  width: 100%;
   display: grid;
-  place-content: center;
-  margin: 1rem;
+  //place-content: center;
+  //margin: 1rem;
 }
 
 img, picture, video, canvas, svg {
@@ -66,4 +66,9 @@ p, h1, h2, h3, h4, h5, h6 {
 
 #root, #__next {
   isolation: isolate;
+  width: 100%;
+}
+
+label {
+  color: var(--cc-dark-gray-cyan);
 }

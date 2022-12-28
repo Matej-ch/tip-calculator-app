@@ -1,13 +1,15 @@
-import {useState} from 'react'
-
-import './App.css'
+import './App.scss'
+import TipCalculator from "./TipCalculator";
+import TipSelector from "./TipSelector";
 
 function App() {
-    const [count, setCount] = useState(0)
 
     return (
-        <div className="App" role="main">
-            <h1>Spli <br/> tter</h1>
+        <div className="app" role="main">
+            <h1 className={'app-name'}>Spli <br/> tter</h1>
+            <TipCalculator >
+                <TipSelector options={[5,10,15,25,50]} />
+            </TipCalculator>
         </div>
     )
 }
