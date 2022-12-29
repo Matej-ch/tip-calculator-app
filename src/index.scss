@@ -21,7 +21,8 @@
   --cc-light-gray-cyan: hsl(185, 41%, 84%);
   --cc-very-light-gray-cyan: hsl(189, 41%, 97%);
   --cc-white: hsl(0, 0%, 100%);
-  --cc-hover: #9fe8df
+  --cc-hover: #9fe8df;
+  --cc-error: hsla(360, 61%, 46%, 1);
 }
 
 *, *::before, *::after {
@@ -71,4 +72,16 @@ p, h1, h2, h3, h4, h5, h6 {
 
 label {
   color: var(--cc-dark-gray-cyan);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

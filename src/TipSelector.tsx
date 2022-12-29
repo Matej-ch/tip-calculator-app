@@ -1,15 +1,21 @@
 import './TipSelector.scss'
 import React, {useState} from "react";
 
-function TipSelector({options}: { options: number[] }) {
+function TipSelector({
+                         handleTipChange,
+                         defaultTipIndex,
+                         options
+                     }: { defaultTipIndex: number, handleTipChange: Function, options: number[] }) {
 
-    const [selectedTip, setSelectedTip] = useState<number>(-1);
+    const [selectedTip, setSelectedTip] = useState<number>(defaultTipIndex);
     const [isCustomTip, setIsCustomTip] = useState<boolean>(false);
     const [customTip, setCustomTip] = useState('25');
 
-    const handleBtnClick = (index: number): void => {
+    const handleBtnClick = (tip: number, index: number): void => {
         setSelectedTip(index);
         setIsCustomTip(false);
+
+        handleTipChange(tip);
     }
 
     const handleCustomTip = (): void => {
@@ -17,13 +23,17 @@ function TipSelector({options}: { options: number[] }) {
         setIsCustomTip(true)
     }
 
-    const handleCustomTipChange = (e: React.ChangeEvent<HTMLInputElement>): void => setCustomTip(e.target.value);
+    const handleCustomTipChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+        setCustomTip(e.target.value)
+        handleTipChange(e.target.value);
+    };
 
     return (<div className={'tip-selector'}>
         <label htmlFor="">Select tip %</label>
         <div className={'options'}>
             {options.map((tip, index) => {
-                return <button onClick={() => handleBtnClick(index)} className={selectedTip === index ? 'selected' : ''}
+                return <button onClick={() => handleBtnClick(tip, index)}
+                               className={selectedTip === index ? 'selected' : ''}
                                key={index}>
                     {tip}%
                 </button>

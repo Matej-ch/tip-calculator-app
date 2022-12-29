@@ -36,6 +36,22 @@
       outline: solid var(--cc-strong-cyan);
     }
   }
+
+  .zero-people::after {
+    content: 'Can\'t be zero';
+    position: absolute;
+    color: var(--cc-error);
+    right: 0;
+    top: -30px;
+  }
+
+  .input-wrapper.zero-people input {
+    outline: solid var(--cc-error);
+
+    &:focus {
+      outline: solid var(--cc-error);
+    }
+  }
 }
 
 .final-tip-wrapper {
