@@ -21,24 +21,25 @@ function TipCalculator({bill, tipPercent, handleBillPriceChange, resetValues, ch
     }
 
     const handleReset = (): void => {
-        setPeople(5);
+        setPeople(1);
         resetValues();
     }
 
     return (<div className={'tip-calculator'}>
-        <label htmlFor="bill">Bill</label>
-        <div className={'input-wrapper'}>
-            <img src={dollarSvg} alt="" width='14'/>
-            <input type="number" step='0.01' min='0' value={bill} id='bill' onChange={handleBillPriceChange}/>
-        </div>
-        {children}
+        <div>
+            <label htmlFor="bill">Bill</label>
+            <div className={'input-wrapper'}>
+                <img src={dollarSvg} alt="" width='14'/>
+                <input type="number" step='0.01' min='0' value={bill} id='bill' onChange={handleBillPriceChange}/>
+            </div>
+            {children}
 
-        <label htmlFor="people">Number of People</label>
-        <div className={people <= 0 ? 'input-wrapper zero-people' : 'input-wrapper'}>
-            <img src={personSvg} alt="" width='14'/>
-            <input type="number" step='1' min='0' value={people} id='people' onChange={handlePeopleChange}/>
+            <label htmlFor="people">Number of People</label>
+            <div className={people <= 0 ? 'input-wrapper zero-people' : 'input-wrapper'}>
+                <img src={personSvg} alt="" width='14'/>
+                <input type="number" step='1' min='0' value={people} id='people' onChange={handlePeopleChange}/>
+            </div>
         </div>
-
 
         <div className={'final-tip-wrapper'}>
             <div className={'flex-group'}>

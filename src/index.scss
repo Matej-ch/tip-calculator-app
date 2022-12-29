@@ -5,7 +5,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --ff-base: 'Space Mono', monospace;;
+  --ff-base: 'Space Mono', monospace;
 
   --fs-base: 16px;
   --fs-input: 24px;
@@ -44,11 +44,8 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   background-color: var(--cc-light-gray-cyan);
-  overflow: hidden;
   width: 100%;
   display: grid;
-  //place-content: center;
-  //margin: 1rem;
 }
 
 img, picture, video, canvas, svg {

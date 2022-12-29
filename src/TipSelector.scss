@@ -49,3 +49,18 @@
     }
   }
 }
+
+@media screen and (min-width: 600px) {
+  .tip-selector {
+    .options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    button {
+      padding: 0.5rem;
+    }
+  }
+
+}

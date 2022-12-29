@@ -19,7 +19,7 @@ function App() {
     }
 
     const resetValues = (): void => {
-        setBill(142.55);
+        setBill(0);
         setTipPercent(15);
         setDefaultTipIndex(2);
     }
