@@ -1,11 +1,13 @@
 import './TipSelector.scss'
 import React, {useState} from "react";
 
-function TipSelector({
-                         handleTipChange,
-                         defaultTipIndex,
-                         options
-                     }: { defaultTipIndex: number, handleTipChange: Function, options: number[] }) {
+type props = {
+    defaultTipIndex: number,
+    handleTipChange: Function,
+    options: number[]
+}
+
+function TipSelector({handleTipChange, defaultTipIndex, options}: props) {
 
     const [selectedTip, setSelectedTip] = useState<number>(defaultTipIndex);
     const [isCustomTip, setIsCustomTip] = useState<boolean>(false);

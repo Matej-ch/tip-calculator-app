@@ -14,7 +14,7 @@ function App() {
         setTipPercent(tip);
     }
 
-    const handleBillPriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleBillPriceChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
         setBill(parseFloat(e.target.value))
     }
 
